@@ -27,8 +27,6 @@ stages:
       - type: job
         stage: Build
         job: NPM
-    triggers:
-      - type: stage
     properties:
       - name: APP_NAME
         value: '${CF_APP}'
@@ -74,8 +72,6 @@ stages:
       - type: job
         stage: 'Build'
         job: Changelog
-    triggers:
-      - type: stage
     properties:
       - name: APP_NAME
         value: '${CF_APP}'
@@ -114,8 +110,6 @@ stages:
       - type: job
         stage: 'Build'
         job: NPM
-    triggers:
-      - type: stage
     properties:
       - name: APP_NAME
         value: '${CF_APP}'
@@ -189,8 +183,6 @@ stages:
       - type: job
         stage: 'Run Tests - Performance & Scale'
         job: New Relic
-    triggers:
-      - type: stage
     properties:
       - name: APP_NAME
         value: '${CF_APP}'
