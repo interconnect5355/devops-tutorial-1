@@ -4,6 +4,8 @@ stages:
     inputs:
       - type: git
         branch: master
+    triggers:
+      - type: commit
     jobs:
       - name: Changelog
         type: builder
